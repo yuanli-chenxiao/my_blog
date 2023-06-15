@@ -5,6 +5,7 @@ tags:
     - ubuntu
 categories: 
     - ubuntu
+    - OS
 description: 一些关于ubuntu的设置
 ---
 
