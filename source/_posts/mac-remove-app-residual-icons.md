@@ -4,8 +4,8 @@ date: 2023-06-15 19:50:34
 tags: 
     - mac
 categories: 
-    - mac
     - OS
+    - mac
 description: mac系统删除启动台应用残留图标
 ---
 

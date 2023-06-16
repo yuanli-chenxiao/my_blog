@@ -4,8 +4,8 @@ date: 2023-06-15 19:16:04
 tags: 
     - ubuntu
 categories: 
-    - ubuntu
     - OS
+    - ubuntu
 description: 一些关于ubuntu的设置
 ---
 
