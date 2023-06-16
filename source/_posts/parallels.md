@@ -36,7 +36,7 @@ description: 转载自大佬的 Parallels破解教程
 - 下载破解补丁到 下载目录 ，也就是 ~/Downloads, 然后解压缩，不要修改解压后的文件夹名称，这样操作都是为了保障后续执行脚本路径正确。
 - 打开终端，开始执行命令破解。
 
-    ```shell
+    ```sh
     # 进入破解补丁目录
     cd ~/Downloads/parallelsdesktopcrack
     
