@@ -43,7 +43,22 @@ custom_file_path:
 scheme: Gemini
 
 # Dark Mode
-darkmode: true
+darkmode: false
+darkmode_js:
+  enable: true
+  bottom: '32px'
+  right: 'unset'
+  left: '32px'
+  time: '0.5s'
+  mixColor: 'transparent'
+  backgroundColor: 'transparent'
+  buttonColorDark: '#100f2c'
+  buttonColorLight: '#fff'
+  isActivated: false
+  saveInCookies: true
+  label: '🌓'
+  autoMatchOsTheme: true
+  libUrl:
 
 
 # ---------------------------------------------------------------
@@ -68,10 +83,10 @@ creative_commons:
   # Available values: big | small
   size: small
   sidebar: false
-  post: false
+  post: true
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
-  language:
+  language: zh-CN
 
 # Open graph settings
 # See: https://hexo.io/docs/helpers#open-graph
@@ -96,11 +111,11 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  首页: / || fa fa-home
-  关于: /about/ || fa fa-user
-  标签: /tags/ || fa fa-tags
-  分类: /categories/ || fa fa-th
-  归档: /archives/ || fa fa-archive
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   # commonweal: /404/ || fa fa-heartbeat
@@ -208,11 +223,11 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-bug
+    name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
-    color: "#76D7C4"
+    color: "#808080"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright:
@@ -257,7 +272,14 @@ post_meta:
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
   separated_meta: true
-  item_text_total: false
+  item_text_post: true
+  item_text_total: true
+  awl: 2
+  wpm: 275
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -419,7 +441,7 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: true
+  enable: false
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default). https://fonts.css.network/
   host: https://fonts.lug.ustc.edu.cn/
