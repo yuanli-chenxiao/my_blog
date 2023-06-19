@@ -14,13 +14,13 @@ description: 转载自大佬的 Parallels破解教程
 - 阿里云盘：<https://www.aliyundrive.com/s/BoEeBiubLJn>
 
 ## 准备工作
-#### 1、下载pd
+### 1、下载pd
 - 官网下载地址：  
     18.1.1：<https://download.parallels.com/desktop/v18/18.1.1-53328/ParallelsDesktop-18.1.1-53328.dmg>  
     18.1.0：<https://download.parallels.com/desktop/v18/18.1.0-53311/ParallelsDesktop-18.1.0-53311.dmg>  
     18.0.1：<https://download.parallels.com/desktop/v18/18.0.1-53056/ParallelsDesktop-18.0.1-53056.dmg>
 
-#### 2、下载破解补丁
+### 2、下载破解补丁
 - 18.1.1：[parallelsdesktopcrack.zip](/download/parallels/parallelsdesktopcrack_18.1.1.zip)  
 - 18.1.0：[parallelsdesktopcrack.zip](/download/parallels/parallelsdesktopcrack_18.1.0.zip)  
 - 18.0.1：[parallelsdesktopcrack.zip](/download/parallels/parallelsdesktopcrack_18.0.1.zip)  
