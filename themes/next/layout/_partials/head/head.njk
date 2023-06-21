@@ -65,3 +65,13 @@
 
 {{ next_data('main', next_config()) }}
 {{- next_js('config.js') }}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPT5E59FNR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KPT5E59FNR');
+</script>
