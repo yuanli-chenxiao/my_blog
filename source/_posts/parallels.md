@@ -1,5 +1,5 @@
 ---
-title: Mac虚拟机 Parallels 18.1.1 破解
+title: Mac虚拟机 Parallels破解
 date: 2023-06-16 10:27:57
 tags:
     - mac
@@ -8,6 +8,8 @@ categories:
     - software
 description: 转载自大佬的 Parallels破解教程
 ---
+
+# Parallels 18破解
 
 ## 18.1.1直装版，直接安装即可，无需手动破解，下载地址如下：
 - 123云盘：<https://www.123pan.com/s/ZFF9-XYnPA>
@@ -63,4 +65,20 @@ description: 转载自大佬的 Parallels破解教程
     sudo chflags schg "/Library/Preferences/Parallels/licenses.json"
     ```
 
-- 至此，破解完成（其他问题 [<font color="#660000">猛戳原文</font>](https://luoxx.top/archives/pd-18-active)）
+# Parallels 19.0.0 54570 破解
+
+## 准备工作
+### 1、下载pd
+- 官网下载地址：
+    19.0.0：<https://download.parallels.com/desktop/v19/19.0.0-54570/ParallelsDesktop-19.0.0-54570.dmg>
+
+### 2、下载激活工具
+- 3.0.0：[ActivationTool.dmg](/download/ActivationTool.dmg)
+
+## 激活方式
+- 打开激活工具，直接双击就能启动激活工具，无需把工具移动到应用程序目录。
+- 运行激活工具后，点击弹出窗口的安装补丁按钮，输入密码即可。
+- 激活之后再次打开pd，会报“请移动到废纸篓”，只需要打开访达，点击侧边栏的应用程序,找到pd，右键打开即可。（只有激活后第一次打开需要如此操作）
+ps：一定要使用访达操作，像qspace之类的第三方文件管理工具，在应用程序右键依然无效，必须得用自带的访达。
+
+- 至此，破解完成（其他问题 [<font color="#660000">猛戳原文</font>](https://luoxx.top/archives/pd-18-active))
