@@ -14,28 +14,28 @@ description: Flask项目部署的一些配置
 - 解压源码包到指定目录
 
 	```sh
-	$ tar -xzvf /target_path/Python-3.9.8.tar.gz -C /target_path/
+	tar -xzvf /target_path/Python-3.9.8.tar.gz -C /target_path/
 	```
 	
 - 进入解压目录并配置
 
 	```sh
-	$ cd /target_path/Python-3.9.8
-	$ ./configure --prefix=/target_path/python3
+	cd /target_path/Python-3.9.8
+	./configure --prefix=/target_path/python3
 	```
 
 - 在python解压目录中执行编译并安装
 
 	```sh
-	$ make
-	$ sudo make install
+	make
+	sudo make install
 	```
 
 - 更改python3文件所有者与所属群组
 
 	```sh
-	$ cd ~
-	$ sudo chown -R user:user /target_path/python3
+	cd ~
+	sudo chown -R user:user /target_path/python3
 	```
 
 - 安装项目依赖模块
@@ -43,21 +43,21 @@ description: Flask项目部署的一些配置
 	+ 解压对应架构依赖压缩包到指定目录
 
 		```sh
-		$ unzip -d /unzip_path/whl python3-xxx.zip
+		unzip -d /unzip_path/whl python3-xxx.zip
 		```
 	
 	+ 创建项目隔离环境
 
 		```sh
-		$ cd /target_path/python3 && mkdir venvs
-		$ /target_path/python3/bin/python3 -m venv /target_path/python3/venvs/flask
+		cd /target_path/python3 && mkdir venvs
+		/target_path/python3/bin/python3 -m venv /target_path/python3/venvs/flask
 		```
 
 	+ 安装依赖模块 
 
 		```shell
-		$ cd ~
-		$ /target_path/python3/venvs/flask/bin/pip3 install --no-index --find-links=/unzip_path/whl -r /unzip_path/whl/requirements.txt
+		cd ~
+		/target_path/python3/venvs/flask/bin/pip3 install --no-index --find-links=/unzip_path/whl -r /unzip_path/whl/requirements.txt
 		```
 
 ## 项目代码解压与uwsgi配置
@@ -65,19 +65,19 @@ description: Flask项目部署的一些配置
 - 解压项目代码到指定目录并进入目录
 
 	```sh
-	$ unzip -d /target_path/ python_code.zip
-	$ cd /target_path/flask
+	unzip -d /target_path/ python_code.zip
+	cd /target_path/flask
 	```
 
 - 编辑 uwsgi-name.ini
 
 	```sh
-	$ vim uwsgi-name.ini
+	vim uwsgi-name.ini
 	```
 
 	编辑内容如下：
 
-	```text
+	```ini
 	[uwsgi]
 	http = 0.0.0.0:xxxx
 	chdir = /target_path/flask
@@ -100,26 +100,26 @@ description: Flask项目部署的一些配置
 - 安装supervisor
 
 	```sh
-	$ /target_path/python3/bin/pip3 install --no-index /unzip_path/whl/supervisor-4.2.5-py2.py3-none-any.whl
+	/target_path/python3/bin/pip3 install --no-index /unzip_path/whl/supervisor-4.2.5-py2.py3-none-any.whl
 	```
 
 - 创建supervisor目录并初始化supervisor配置
 
 	```sh
-	$ mkdir /target_path/supervisor
-	$ cd /target_path/supervisor && mkdir conf.d
-	$ cd ~ && /target_path/python3/bin/echo_supervisord_conf > /target_path/supervisor/supervisord.conf
+	mkdir /target_path/supervisor
+	cd /target_path/supervisor && mkdir conf.d
+	cd ~ && /target_path/python3/bin/echo_supervisord_conf > /target_path/supervisor/supervisord.conf
 	```
 
 - 更改supervisor配置
 
 	```sh
-	$ vim /target_path/supervisor/supervisord.conf
+	vim /target_path/supervisor/supervisord.conf
 	```
 
 	跳转到文件最后并修改最后两行为：
 	
-	```text
+	```ini
 	[include]
 	files = /target_path/supervisor/conf.d/*.ini
 	```
@@ -127,13 +127,13 @@ description: Flask项目部署的一些配置
 - 创建项目配置文件并启动
 
 	```sh
-	$ cd /target_path/supervisor/conf.d
-	$ vim flask.ini
+	cd /target_path/supervisor/conf.d
+	vim flask.ini
 	```
 
 	内容如下：
 
-	```text
+	```ini
 	[program:flask]
 	command=/target_path/python3/venvs/flask/bin/uwsgi --ini /target_path/imsp-python/uwsgi-name.ini
 	directory=/target_path/flask
@@ -155,21 +155,21 @@ description: Flask项目部署的一些配置
 
 	```sh
 	# 启动supervisor服务
-	$ /target_path/python3/bin/supervisord -c /target_path/supervisor/supervisord.conf
+	/target_path/python3/bin/supervisord -c /target_path/supervisor/supervisord.conf
 
 	# 启动flask项目
-	$ /target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf start all
+	/target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf start all
 	```
 
 	其他命令：
 
 	```shell
 	# 查看flask项目状态
-	$ /target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf status all
+	/target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf status all
 
 	# 更新supervisord.conf配置
-	$ /target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf update
+	/target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf update
 
 	# 重载flask项目配置
-	$ /target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf reload
+	/target_path/python3/bin/supervisorctl -c /target_path/supervisor/supervisord.conf reload
 	```

@@ -13,7 +13,7 @@ description: 一些关于ubuntu的设置
 
 - ubuntu 18.04
 ```ini
-$ sudo vim /etc/netplan/01-netcfg.yaml
+sudo vim /etc/netplan/01-netcfg.yaml
 
 network:
   version: 2
@@ -26,12 +26,12 @@ network:
       nameservers:
               addresses: [114.114.114.114,8.8.8.8]
 
-$ sudo netplan apply
+sudo netplan apply
 ```
 
 - ubuntu 16.04
 ```ini
-$ sudo vim /etc/network/interfaces
+sudo vim /etc/network/interfaces
 
 auto ens160
 iface ens160 inet static
@@ -40,20 +40,19 @@ netmask 255.255.255.0
 gateway 192.168.1.1
 dns-nameservers 192.168.1.1
 
-$ sudo service networking restart
-$ sudo reboot
-
+sudo service networking restart
+sudo reboot
 ```
 
 ## Ubuntu16.04 设置时区
 
 ```shell
-$ sudo timedatectl set-timezone Asia/Shanghai
+sudo timedatectl set-timezone Asia/Shanghai
 ```
 
 ## ubuntu16.04-安装目标软件：
 
 ```shell
-$ sudo add-apt-repository ppa:jonathonf/xxx
-$ sudo apt-get update
+sudo add-apt-repository ppa:jonathonf/xxx
+sudo apt-get update
 ```

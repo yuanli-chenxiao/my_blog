@@ -10,7 +10,7 @@ description: git常用命令
 
 ## 解决git老要输入账户密码问题
 ```sh
-$ git config --global credential.helper store
+git config --global credential.helper store
 ```
 
 ## git压缩命令
@@ -20,6 +20,6 @@ git archive --format=zip --output=/path/to/object_name.zip branch_name
 
 ## 配置git代理
 ```sh
-$ git config --global http.proxy 127.0.0.1:7890
-$ git config --global https.proxy 127.0.0.1:7890
+git config --global http.proxy 127.0.0.1:7890
+git config --global https.proxy 127.0.0.1:7890
 ```

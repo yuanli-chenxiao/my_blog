@@ -15,11 +15,11 @@ description: mac系统删除启动台应用残留图标
 
 3、打开终端，输入以下命令并按下空格：
 ```sh
-$ cd /private/var/folders/hw/2j329y9n2t583q8f22kb9yw00000gp/0/com.apple.dock.launchpad/db
+cd /private/var/folders/hw/2j329y9n2t583q8f22kb9yw00000gp/0/com.apple.dock.launchpad/db
 ```
 鉴于不一定每一个人都是这个路径，所以请选中“db”目录后，按下快捷键“Command + i”，查看完整路径去修改自己的命令。  
 
 4、最后就是关键的一步，接着在“终端”输入删除遗留产物的命令行：
 ```sh
-$ sqlite3 db "delete from apps where title='app name';"&&killall Dock
+sqlite3 db "delete from apps where title='app name';"&&killall Dock
 ```
