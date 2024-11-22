@@ -7,13 +7,13 @@ title: 远离尘嚣
 subtitle: ''
 description: ''
 keywords:
-author: chenxiao
+author: AwayCX
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://blog.awaycx.xyz
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
